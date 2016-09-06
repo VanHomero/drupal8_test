@@ -1,0 +1,11 @@
+name: Theme One
+type: theme
+description: First theme create
+core: 8.x
+regions:
+  header: Header
+  content: Content
+  sidebar: Sidebar
+  footer: Footer
+libraries:
+  - themeone/global-styling

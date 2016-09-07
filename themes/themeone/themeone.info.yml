@@ -4,7 +4,9 @@ description: First theme create
 core: 8.x
 regions:
   header: Header
+  pre_content: 'Pre Content'
   content: Content
+  suf_content: 'Suf Content'
   sidebar: Sidebar
   footer: Footer
 libraries:

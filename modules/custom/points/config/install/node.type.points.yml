@@ -1,0 +1,11 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Points'
+type: points
+description: 'Content type with a google field map, image & description.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true
+third_party_settings: {  }

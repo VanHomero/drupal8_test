@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.points_map
+    - node.type.points
+  module:
+    - google_map_field
+id: node.points.points_map
+field_name: points_map
+entity_type: node
+bundle: points
+label: Point in map
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+third_party_settings: {  }
+field_type: google_map_field

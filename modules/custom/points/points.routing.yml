@@ -1,0 +1,6 @@
+config_points.description:
+  path: 'points/point'
+  defaults:
+    _controller: '\Drupal\points\Controller\PointsController::description'
+  requirements:
+    _permission: 'access content'

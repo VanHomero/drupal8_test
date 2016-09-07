@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.points_image
+    - node.type.points
+  module:
+    - image
+id: node.points.points_image
+field_name: points_image
+entity_type: node
+bundle: points
+label: Image
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+third_party_settings: {  }
+field_type: image

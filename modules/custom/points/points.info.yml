@@ -1,0 +1,16 @@
+name: Points
+description: Is a module that allows create a content type georefered
+package: MyTest
+type: module
+# core: 8.x
+dependencies:
+  - node
+  - text
+  - image
+  - google_map_field
+
+# Information added by Drupal.org packaging script on 2016-08-21
+version: '8.x.1'
+core: '8.x'
+project: 'MyTest'
+datestamp: 1473282939

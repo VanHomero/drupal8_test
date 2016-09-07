@@ -1,0 +1,77 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.points.body
+    - field.field.node.points.points_map
+    - field.field.node.points.points_image
+    - node.type.points
+  module:
+    - path
+    - text
+    - image
+    - google_map_field
+id: node.points.default
+targetEntityType: node
+bundle: points
+mode: default
+content:
+  title:
+    type: string_textfield
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    type: text_textarea_with_summary
+    weight: 6
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  points_image:
+    type: image_image
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+  points_map:
+    type: google_map_field_default
+    weight: 8
+    settings:
+      lat: 4.6824671
+      lon: -74.0482083
+    third_party_settings: {  }
+hidden: {  }
+third_party_settings: {  }

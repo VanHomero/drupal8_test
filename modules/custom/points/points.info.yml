@@ -5,6 +5,7 @@ type: module
 # core: 8.x
 dependencies:
   - node
+  - path
   - text
   - image
   - google_map_field

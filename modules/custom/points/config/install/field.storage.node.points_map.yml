@@ -5,7 +5,7 @@ dependencies:
   module:
     - node
     - google_map_field
-id: node.points_image
+id: node.points_map
 field_name: points_map
 entity_type: node
 type: google_map_field

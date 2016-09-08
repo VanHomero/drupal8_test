@@ -1,0 +1,9 @@
+points.points_map:
+  css:
+    component:
+      css/points_map.css: {}
+  js:
+    js/points_map.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

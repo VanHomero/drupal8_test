@@ -1,3 +1,6 @@
 points.description:
   title: Config Points Content Type
   route_name: config_points.description
+points.listpoints:
+  title: List of points
+  route_name: points.listpoints

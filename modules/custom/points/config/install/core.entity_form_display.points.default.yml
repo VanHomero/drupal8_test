@@ -3,8 +3,8 @@ status: true
 dependencies:
   config:
     - field.field.node.points.body
-    - field.field.node.points.points_map
     - field.field.node.points.points_image
+    - field.field.node.points.points_map
     - node.type.points
   module:
     - path

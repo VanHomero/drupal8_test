@@ -1,6 +1,6 @@
-config_points.description:
-  path: 'points/point'
+points.listpoints:
+  path: 'points'
   defaults:
-    _controller: '\Drupal\points\Controller\PointsController::description'
+    _controller: '\Drupal\points\Controller\PointsController::pointsList'
   requirements:
     _permission: 'access content'

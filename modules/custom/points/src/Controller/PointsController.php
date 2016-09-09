@@ -24,9 +24,17 @@ class PointsController extends ControllerBase {
 
     $nodes = entity_load_multiple('node', $nids);
 
-    $coords = $nodes;
+    $coords = array();
 
-    print_r($coords);
+    foreach ($nodes as $node) {
+      $point = $node->get('points_map');
+      $coords[] = array(
+        'title' => $node->get('title')->value,
+        'lat' => $point->lat,
+        'lon' => $point->lon,
+      );
+    }
+
 
     $build = array();
     $build['content'] = array(

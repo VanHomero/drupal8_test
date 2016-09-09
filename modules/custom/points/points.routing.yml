@@ -2,5 +2,6 @@ points.listpoints:
   path: 'points'
   defaults:
     _controller: '\Drupal\points\Controller\PointsController::pointsList'
+    _title: 'List of points'
   requirements:
     _permission: 'access content'

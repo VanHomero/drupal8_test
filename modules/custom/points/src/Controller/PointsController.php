@@ -3,8 +3,7 @@
 namespace Drupal\points\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
-use Drupal\Core\Link;
-use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 /**
  * Controller routines for node_type_example.
@@ -47,5 +46,27 @@ class PointsController extends ControllerBase {
     $build['#attached']['drupalSettings']['points']['coords'] = $coords;
 
     return $build;
+  }
+  public function pointsServices() {
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'points')
+      ->condition('status', 1);
+    $nids = $query->execute();
+
+    $nodes = entity_load_multiple('node', $nids);
+
+    $coords = array();
+
+    foreach ($nodes as $node) {
+      $point = $node->get('points_map');
+      $coords[] = array(
+        'title' => $node->get('title')->value,
+        'lat' => $point->lat,
+        'lon' => $point->lon,
+      );
+    }
+    $response['data'] = $coords;
+    
+    return new JsonResponse($response); 
   }
 }

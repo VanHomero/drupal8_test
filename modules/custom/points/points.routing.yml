@@ -4,4 +4,10 @@ points.listpoints:
     _controller: '\Drupal\points\Controller\PointsController::pointsList'
     _title: 'List of points'
   requirements:
+    _permission: 'access points'
+points.services:
+  path: 'points/services'
+  defaults:
+    _controller: '\Drupal\points\Controller\PointsController::pointsServices'
+  requirements:
     _permission: 'access content'

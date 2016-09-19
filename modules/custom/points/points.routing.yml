@@ -2,7 +2,7 @@ points.listpoints:
   path: 'points'
   defaults:
     _controller: '\Drupal\points\Controller\PointsController::pointsList'
-    _title: 'List of points'
+    _title_callback : '\Drupal\points\Controller\PointsController::pointsListTitle'
   requirements:
     _permission: 'access points'
 points.services:
@@ -10,4 +10,10 @@ points.services:
   defaults:
     _controller: '\Drupal\points\Controller\PointsController::pointsServices'
   requirements:
-    _permission: 'access content'
+    _permission: 'access points'
+points.services_argument:
+  path: 'points/services/{point}'
+  defaults:
+    _controller: '\Drupal\points\Controller\PointsController::pointsServicesArgs'
+  requirements:
+    _permission: 'access points'

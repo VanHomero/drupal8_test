@@ -47,9 +47,36 @@ class PointsController extends ControllerBase {
 
     return $build;
   }
+  public function pointsListTitle() {
+    $date = date('Y-m-d');
+    return 'Points List '.$date;
+  }
   public function pointsServices() {
     $query = \Drupal::entityQuery('node')
       ->condition('type', 'points')
+      ->condition('status', 1);
+    $nids = $query->execute();
+
+    $nodes = entity_load_multiple('node', $nids);
+
+    $coords = array();
+
+    foreach ($nodes as $node) {
+      $point = $node->get('points_map');
+      $coords[] = array(
+        'title' => $node->get('title')->value,
+        'lat' => $point->lat,
+        'lon' => $point->lon,
+      );
+    }
+    $response['data'] = $coords;
+    
+    return new JsonResponse($response); 
+  }
+  public function pointsServicesArgs($point) {
+    $query = \Drupal::entityQuery('node')
+      ->condition('type', 'points')
+      ->condition('nid', $point)
       ->condition('status', 1);
     $nids = $query->execute();
 
